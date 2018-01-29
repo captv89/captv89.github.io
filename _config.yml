@@ -42,3 +42,5 @@ front_img_path: "imgs/background.jpg"
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+theme: jekyll-theme-cayman
