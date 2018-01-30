@@ -1,4 +1,5 @@
-# front cover jekyll theme
+# My Portfolio On Github
+* Thank you github :)
 
 ## Why choose this jekyll theme for your front page?
 * You don't have to modify any HTML, everything can be modified in config.yml.
@@ -7,7 +8,7 @@
 
 
 ## See it in action
-<a href="https://dashingcode.github.io/front-cover/">Live demo page</a>
+<a href="https://captv89.github.io">My Portfolio Page</a>
 
 ## Credits
 The background image that was used as an example comes from Tom Hall.
