@@ -105,8 +105,12 @@ permalink: /
                     <li><a class="fa fa-2x fa-reddit" href="https://reddit.com/user/{{ site.reddit_username }}"><span class="description">Reddit</span></a></li>
                     {% endif %}
 
-                    {% if site.medium_username %}
-                    <li><a class="fa fa-2x fa-medium" href="https://medium.com/@{{ site.medium_username }}"><span class="description">Medium</span></a></li>
+                    {% if site.resume_username %}
+                    <li>
+                        <a class="fa fa-2x fa-medium" href="https://resume.com/share/{{ site.medium_username }}">
+                            <span class="description">Resume</span>
+                        </a>
+                    </li>
                     {% endif %}
 
                     {% if site.tumblr_username %}
