@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+    font-family: 'Merienda One', cursive;
     background-color: rgba(0, 0, 0, 0.9);
     position: absolute; 
     top: 0;
@@ -29,18 +29,20 @@ h1 {
     font-weight: bold;
     letter-spacing: 0.1em;
     font-size: 4em;
-    font-family: 'Open Sans';
+    font-family: 'Merienda One';
     margin: -10px 0;
+    text-shadow: 4px 4px 4px rgb(59, 59, 59);
 }
 h3 {
     color: white;
     padding-bottom: 20px;
     font-weight: thin;
+    text-shadow: 4px 4px 4px rgb(59, 59, 59);
 }
 .content {
     padding-top: 100px;
-    padding-bottom: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 26%;
+    background-color: rgba(0, 0, 0, 0.25);
     text-align: center;
 }
 ul {
@@ -115,7 +117,7 @@ a:hover {
 .description {
     display: inline-block;
     color: white;
-    font-family: Arial;
+    font-family: 'Iceland', cursive;
     margin-left: 40px;
 }
 .content {
