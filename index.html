@@ -28,10 +28,14 @@ permalink: /
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="{{ "css/front.css" | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="{{ "css/style.css" | prepend: site.baseurl }}">
         <link href='https://fonts.googleapis.com/css?family=Iceland|Merienda+One' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
     <body>
+
+        <div id="particles-js"></div>
+
         <div class="content">
             {% if site.front_img %}
             <img src="{{ site.front_img_path }}" id="fullscreen">
@@ -131,5 +135,6 @@ permalink: /
                 </ul>
         </div>
 {% include analytics.html %}
+{% include particles.html %}
     </body>
 </html>
