@@ -11,10 +11,6 @@
 
 
 /* remove canvas default margin */
-canvas{
-	display:block;
-	vertical-align:bottom;
-}
 
 #particles-js{
 	position: fixed;
@@ -22,3 +18,5 @@ canvas{
 	height:100%;
 	z-index: -1;
 }
+
+
