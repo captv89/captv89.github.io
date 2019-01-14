@@ -115,6 +115,10 @@ permalink: /
                     <li><a class="fa fa-2x fa-clipboard" href="https://resume.com/share/{{ site.resume_username }}"><span class="description">Resume</span></a></li>
                     {% endif %}
 
+                    {% if site.public_key_url %}
+                    <li><a class="fa fa-2x fa-camera" href="{{ site.public_key_url }}"><span class="description">Photo Gallery</span></a></li>
+                    {% endif %}
+
                     {% if site.tumblr_username %}
                     <li><a class="fa fa-2x fa-tumblr" href="https://{{ site.tumblr_username }}.tumblr.com/"><span class="description">Tumblr</span></a></li>
                     {% endif %}
@@ -129,10 +133,6 @@ permalink: /
 
                     {% if site.email %}
                     <li><a class="fa fa-2x fa-envelope" href="/contact.html"><span class="description">Email</span></a></li>
-                    {% endif %}
-
-                    {% if site.public_key_url %}
-                    <li><a class="fa fa-2x fa-key" href="{{ site.public_key_url }}"><span class="description">PGP Key</span></a></li>
                     {% endif %}
                 </ul>
         </div>
