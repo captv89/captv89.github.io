@@ -1,6 +1,10 @@
 # My Portfolio On Github
 * Thank you github :)
 
+## Badges
+
+[![Uptime Robot ratio (7 days)](https://img.shields.io/uptimerobot/ratio/7/m788334180-a70f715caadb48c680a12513?style=plastic)](https://captv89.github.io)
+
 ## Why choose this jekyll theme for your front page?
 * You don't have to modify any HTML, everything can be modified in config.yml.
 * Very lightweight. No Javascript, No Bootstrap etc..
