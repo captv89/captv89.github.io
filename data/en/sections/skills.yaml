@@ -1,0 +1,70 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Kubernetes
+  logo: /images/sections/skills/kubernetes.png
+  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
+  url: "https://kubernetes.io/"
+
+- name: Golang
+  logo: /images/sections/skills/go.png
+  summary: "Using as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
+  url: "https://golang.org/"
+
+- name: Cloud Computing
+  logo: /images/sections/skills/cloud.png
+  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+
+- name: Navigation
+  logo: /images/sections/skills/ship.svg
+  summary: "Capable to manoeuvring vessel in any sea condition. Experinced in docking and anchoring as well. Strong knowledge of maritime operations."
+  url: "https://en.wikipedia.org/wiki/Navigation"
+
+- name: Product Management
+  logo: /images/sections/skills/helm.svg
+  summary: "Capable of defining product vision, oversseing product's development from inception to completion and maintaning product during its lifecycle."
+  url: "https://www.dnv.com/services/software-for-ship-operations-navigator-1441"
+
+- name: Linux
+  logo: /images/sections/skills/linux.png
+  summary: "Using as the main operating system. Capable of writing bash/shell scripts."
+
+- name: Git
+  logo: /images/sections/skills/git.png
+  summary: "Experienced with git-based development. Mostly, used Github. Also, have experience in working with GitLab and Azure Repo."
+  url: "https://git-scm.com/"
+
+- name: DevSecOps
+  logo: /images/sections/skills/devops.svg
+  summary: "Hand on experince is DevSecOps activities. Setting CI/CD pipeline to deployment enviorments. Automating tasks like security and QA tests. Experinced with Azure DevOps and Jenkins"
+  url: "https://azure.microsoft.com/en-us/services/devops/"
+
+- name: Cyber Security
+  logo: /images/sections/skills/cybersec.svg
+  summary: "Security as a mindset. Keeping track of vulnerabilities, review SAST code reports and acting promptly to fix the issues in a timely manner. Shift Left security practices."
+  url: "https://snyk.io/learn/application-security/static-application-security-testing/"
+
+- name: Machine Learning (AI)
+  logo: /images/sections/skills/mlai.svg
+  summary: "Proficient in traning ML models with TensorFlow. Rookie in MLOps. Hand on experince in developing models in Azure (NoCode) Machine Learning service."
+  url: "https://azure.microsoft.com/en-us/services/machine-learning/"
+
+- name: Flutter
+  logo: /images/sections/skills/flutter.svg
+  summary: "Intermediatery skill in developing cross-platform application using Flutter and Dart. Good understanding of stateless and stateful widgets. Having fun using animations."
+  url: "https://flutter.dev/"
+
+- name: Svelte
+  logo: /images/sections/skills/svelte.svg
+  summary: "Frontend framwork of choice. Love animations and robust nature of the framework. Hands on experince in creating frontend apps with golang backend server."
+  url: "https://www.linkedin.com/pulse/svelte-meets-gin-vishnu-raveendranathan/"

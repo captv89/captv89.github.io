@@ -1,0 +1,79 @@
+# section information
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+# Your experiences
+experiences:
+- company:
+    name: DNV
+    url: "https://www.dnv.com"
+    location: Rostock, Germany
+    # company overview
+    overview: DNV is an international accredited registrar and classification society headquartered in Høvik, Norway. The company currently has about 12,000 employees and 350 offices operating in more than 100 countries, and provides services for several industries including maritime, oil & gas, renewable energy, electrification, food & beverage and healthcare. 
+  positions:
+  - designation: Product Manager
+    start: Dec 2021
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Product Manager for **Navigator** product line
+    - Define vision and strategy for the life cycle of the product line.
+    - Lead and motivate the technical team to achieve goals.
+    - Customer interactions and target alignments.
+    - Architectural and technical brainstorming.
+    - Review & monitoring security implementations.
+    - Closely work with project, sales and marketing teams.
+    - Design to production of integrations with strategic partners
+    - Define functional documentation and designing ER for the data models.
+    - Consulting for multiple maritime ERP modules.
+
+
+- company:
+    name: Alpha Ori Technologies
+    url: "https://www.alphaori.sg/"
+    location: Chennai, India
+    overview: Alpha Ori Technologies™ is transforming the multi-trillion dollar maritime industry from analog, disjointed systems into smart digital enterprises. Our Digital Solutions harness the power of Data collected through Internet of Things, moving & making it usable via Cloud and applying Machine Learning & Artificial Intelligence to it.
+  positions:
+  - designation: Business Analyst / Product Owner
+    start: March 2020
+    end: Nov 2021
+    responsibilities:
+    - Product Owner for **Maintenance** module in the marine ERP
+    - Defining EAM & ERP Solution for Maritime Industry
+    - SME in Marine Business Application
+    - Dynamics 365 BC Functional Knowledge
+    - Requirements Gathering
+    - Project Coordinator
+    - DevOps Management
+    - Analyst for other maritime modules.
+    - Defining production deployment strategies with Architects.
+    - Data Analysis & Migration strategy development.
+
+- company:
+    name: Merchant Navy
+    url: "https://en.wikipedia.org/wiki/Merchant_navy"
+    location: Worldwide
+    overview: Merchant Navy is the stream of supply chain which moves cargo in bulk from point A to B. There are various types of ships to transport cargo of different nature.
+  positions:
+  - designation: Navigating Officer
+    start: Nov 2019
+    end: Jan 2010
+    responsibilities:
+    - Professional training and certification in
+    - 1. Fire fighting
+    - 2. Emergency First Aid & Medical Care
+    - 3. Personal Survival Techniques
+    - 4. Watch keeping & Navigation
+    - 5. GMDSS Radio Communication
+    - Sailed on Bulk Carriers and Container Ships.
+    - Strong knowledge on vessel maintenance and management.
+    - Clear understanding of Ship Operations.
+    - Detailed knowledge of supply chain activities associated with merchant fleet.
+    - Good understanding of port operations.

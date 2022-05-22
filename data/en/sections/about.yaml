@@ -1,0 +1,93 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Product Manager
+# your company information
+company:
+  name: DNV
+  url: "https://www.dnv.com"
+
+# your resume. this file path should be relative to you "static" directory
+resume: "https://captv89.github.io/myResume/"
+
+# a summary about you
+summary: 'I am **passion** fueled & **perfection** driven. In this open-source world **continuos learning** is the *key* that helps me **develop new skills** and be au fait with the technology.'
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+- name: Email
+  icon: "fas fa-envelope"
+  url: "s274ciaky@mozmail.com"
+
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/captv89"
+
+- name: Stackoverflow
+  icon: "fab fa-stack-overflow"
+  url: "https://stackoverflow.com/users/13595885/captv89"
+
+- name: LinkedIn
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/vishnu-ravendranathan-1b3b9496/"
+
+- name: Twitter
+  icon: "fab fa-twitter"
+  url: "https://twitter.com/Capt_Vishnu"
+
+- name: Facebook
+  icon: "fab fa-instagram"
+  url: "https://www.instagram.com/wanderlustframez/"
+
+# Show your badges
+# You can show your verifiable certificates from https://www.credly.com.
+# You can also show a circular bar indicating the level of expertise on a certain skill
+badges:
+- type: certification
+  name: IBM AI Foundation for Business
+  url: "https://www.coursera.org/account/accomplishments/specialization/XR87ZB6A2Y49?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n"
+  badge: "https://images.credly.com/size/340x340/images/c3a4c477-8fb6-4737-af88-cabbea1ad55b/IBM_AI_Foundations_for_Business.png"
+
+- type: certification
+  name: AWS IoT Predictive Maintenance
+  url: "https://drive.google.com/file/d/1dRb7egy-s6NOtmUbw5V9-TB99HAOKs06/view"
+  badge: "https://images.credly.com/size/340x340/images/28425998-33a8-4393-8bcb-ed3ed30c4aca/Technical_Proficiency.png"
+
+- type: certification
+  name: Stanford Artificial Intelligence and Machine Learning
+  url: "https://www.coursera.org/account/accomplishments/certificate/5G5EPSLP7G28"
+  badge: "https://images.credly.com/size/340x340/images/cbf66256-faff-43b1-ab11-2c5346e61aee/image.png"
+
+- type: soft-skill-indicator
+  name: Leadership
+  percentage: 95
+  color: blue
+
+- type: soft-skill-indicator
+  name: Team Work
+  percentage: 90
+  color: yellow
+
+- type: soft-skill-indicator
+  name: Dedication
+  percentage: 100
+  color: orange
+
+#you can also provide color code instead of the color name
+# - type: soft-skill-indicator
+#   name: Communication
+#   percentage: 95
+#   color: "#00adb5"
+
+# - type: soft-skill-indicator
+#   name: Driven
+#   percentage: 100
+#   color: "pink"

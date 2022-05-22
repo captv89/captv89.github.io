@@ -1,0 +1,26 @@
+# some information about you
+name: "Vishnu Ravendranathan"
+nickname: "Vishnu"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, I am"
+image: "images/author/pic.png"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "s274ciaky@mozmail.com"
+  phone: i_am_vishnu
+  github: captv89
+  linkedin: vishnu-ravendranathan-1b3b9496
+
+# some summary about what you do
+summary:
+  - I am a Product Manager
+  - I am an ex-Sailor
+  - I am a self taught programmer
+  - I love web development
+  - I love machine-learning (AI)
+  - I am learning chaincodes (Blockchain)
+  - I work on open-source projects
+  - I love contributing to maritime industry
+  - I am a DevOps person
+  - I love to automate boring and repetative tasks
+  - I'm passion driven and au fait with the technology
