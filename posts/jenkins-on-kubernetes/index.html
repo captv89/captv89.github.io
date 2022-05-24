@@ -1,0 +1,124 @@
+<!doctype html><html><head><title>Jenkins on Kubernetes</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600"><link rel=stylesheet href=/fontawesome/css/all.min.css><link rel=icon type=image/png href=/images/site/favicon_huad92fbe791bb9890b5dfbfd5918b6279_21455_42x0_resize_box_3.png><meta property="og:title" content="Jenkins on Kubernetes"><meta property="og:description" content="Setting up Jenkins on Kubernetes and running the first job."><meta property="og:type" content="article"><meta property="og:url" content="https://captv89.github.io/posts/jenkins-on-kubernetes/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-03-26T09:00:00+05:30"><meta property="article:modified_time" content="2021-03-26T09:00:00+05:30"><meta name=description content="Setting up Jenkins on Kubernetes and running the first job."><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css><link rel=stylesheet href=/css/style.css><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,o,i,a,t,n,s){e.GoogleAnalyticsObject=t,e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].l=1*new Date,n=o.createElement(i),s=o.getElementsByTagName(i)[0],n.async=1,n.src=a,s.parentNode.insertBefore(n,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-113341784-1","auto"),ga("send","pageview"))</script><script data-goatcounter=https://captv89.goatcounter.com/count async src=//gc.zgo.at/count.js></script></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/site/main-logo_hu8f21842204c2b30232e4b03a5ab63562_8582_42x0_resize_box_3.png alt=Logo>
+Tech Savvy Sailor</a>
+<button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"></ul></div></div><img src=/images/site/main-logo_hu8f21842204c2b30232e4b03a5ab63562_8582_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/site/inverted-logo_hu8f21842204c2b30232e4b03a5ab63562_8582_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/posts data-filter=all>Blog</a></li><div class=subtree><li><a class=active href=/posts/jenkins-on-kubernetes/ title="Jenkins on Kubernetes">Jenkins on Kubernetes</a></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://captv89.github.io/posts/jenkins-on-kubernetes/automation.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/avatar_hue4922fa88d9194205e1b704e040347af_47760_150x150_fit_box_3.png alt="Author Image"><h5 class=author-name>Vishnu Ravendranathan</h5><p>Friday, March 26, 2021</p></div><div class=title><h1>Jenkins on Kubernetes</h1></div><div class=taxonomy-terms><ul><li class=rounded><a href=/tags/kubernetes class="btn, btn-sm">Kubernetes</a></li><li class=rounded><a href=/tags/jenkins class="btn, btn-sm">Jenkins</a></li></ul></div><div class=post-content id=post-content><p>Noob Friendly, Setting up Jenkins on Kubernetes and running the first job.</p><pre tabindex=0><code>Hello World !
+</code></pre><p>This is what we are going to see in the end of this noob friendly tutorial. I won&rsquo;t be using GUI in this tutorial to a large extent. CLI is the right way to learn doing things, so we will be holding on to our PS (PowerShell) Terminals for more than 80% of the tut.</p><p>Pre-requisites: Here are the pre-requisites to follow along:</p><ul><li>The OS of Choice is Windows 10. However this can be translated to any Linux or MacOS enviornments with slight tweaks. The overall flow would still remain the same.</li><li>Azure Free Account Created: Create your Azure free account today | Microsoft Azure</li></ul><p>Topics: In this tutorial I will be covering the following topics:</p><ul><li>Installing Azure CLI - Command line for Azure Services</li><li>Deploying Azure Kubernetes Service (AKS) cluster</li><li>Installing Kubectl - Command line for Kubernetes</li><li>Deploying Jenkins on the AKS</li><li>Setup Jenkins & Create your first pipeline</li></ul><h2 id=installing-azure-cli>Installing Azure CLI</h2><p>Azure Portal is a very user friendly GUI for getting almost anything done in Azure. With an impressive Shell right in the portal it comes with all the goodies. But to know the activities better, to make it more cleaner and maybe even automate, I decided to go with Az or the Azure CLI.</p><p>Fire up your PS terminal as an Administrator and enter the below to download and install latest Azure CLI.</p><pre tabindex=0><code>Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList &#39;/I AzureCLI.msi /quiet&#39;; rm .\AzureCLI.msi
+</code></pre><p>After installation, close and reopen the PS Terminal. To confirm the installation was successful enter the below:</p><pre tabindex=0><code>az --version
+</code></pre><p>If all went well you should see screen as shown below:</p><p><img src=screen1.png alt=screenshot-1></p><h2 id=deploying-azure-kubernetes-service-aks-cluster>Deploying Azure Kubernetes Service (AKS) cluster</h2><p>Those of who are interested in knowing more about K8s (short for Kubernetes) should definitely try to go through their Documentation. Its an excellent coffee time read !(<a href=https://kubernetes.io/docs/home/>Kubernetes Documentation | Kubernetes</a>)</p><p>Ok, so lets get started by logging into Azure via CLI. In the PS Terminal run the below line. This would open your default browser and take you to Azure Login page. Use your login name and password used during the creation of account to validate.</p><pre tabindex=0><code>az login
+</code></pre><p><strong>Note</strong>: The browser should automatically redirect to Azure CLI documentation page after a successful login. You can go ahead and read it if you would like to learn more, else close the window.</p><p>On successful login you should see the below in your terminal:</p><p><img src=screen2.png alt=screenshot-2></p><p>First thing to do after logging in would be to create a new Resource Group for the activities to follow. Execute below line to create a Resource group named &lsquo;Jenkins&rsquo;. This would be setup in location <em>southindia</em>.</p><pre tabindex=0><code>az group create --name Jenkins --location southindia
+</code></pre><p><strong>Tip</strong>: If you would like to know all different locations, run:</p><pre tabindex=0><code>az account list-locations
+</code></pre><p>Alright, we have now geared up to perform what we started this mission for. As a last check, run the below to ensure that we have the required subscriptions to perform the activities:</p><pre tabindex=0><code>az provider show -n Microsoft.OperationsManagement -o table
+az provider show -n Microsoft.OperationalInsights -o table
+</code></pre><p>Once these pass clear then we are good to go. If this threw some error then we need to run below:</p><pre tabindex=0><code>az provider register --namespace Microsoft.OperationsManagement
+az provider register --namespace Microsoft.OperationalInsights
+</code></pre><p>With our brand new Resource group in hand, lets create an AKS in it. As you see below I am creating a cluster named myk8Cluster. We will start with just one node and use the standard resource.</p><pre tabindex=0><code>az aks create --resource-group Jenkins --name myk8Cluster --node-count 1 --enable-addons monitoring --generate-ssh-keys
+</code></pre><p>This process should take some time to complete. In the mean time lets prepare our PC to start using <em>kubectl</em>.</p><h2 id=installing-kubectl---kubernetes-cli>Installing Kubectl - Kubernetes CLI</h2><p>Kubectl is very powerful and helpful for us to get total control over the K8s. It accepts yaml configurations, which will help us with remaining process.</p><pre tabindex=0><code>az aks install-cli
+</code></pre><p>Once this completes, lets get the credentials to access the AKS from Azure. This will store the required credentials in the local PC.</p><pre tabindex=0><code>az aks get-credentials --resource-group Jenkins --name myk8Cluster
+</code></pre><p><strong>Note</strong>: During the Kubectl installations there would be several warnings asking you to add the PATH to the Windows Environment Variables. Add these to call the kubectl command from the terminals.</p><p>After the kubectl is installed, you need to restart the PS Terminal. Test the kubectl by running the below, it should show you the active K8s/AKS nodes</p><pre tabindex=0><code>kubectl get nodes
+</code></pre><p>This should give an output like below:</p><p><img src=screen3.png alt=screenshot-3></p><h2 id=deploying-jenkins-on-aks>Deploying Jenkins on AKS</h2><p>Lets create a namespace for deploying the Jenkins in AKS. This helps us in simplifying the configurations.</p><pre tabindex=0><code>kubectl create namespace jenkins
+</code></pre><p>To deploy the Jenkins app to the Pod we need to run the below line. Please note that the configuration required has been passed here as a yaml file.</p><pre tabindex=0><code>kubectl create -f &#39;C:\Scripts\jenkins.yaml&#39; --namespace jenkins
+</code></pre><p>jenkins.yaml looks like this:</p><pre tabindex=0><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      containers:
+      - name: jenkins
+        image: jenkins/jenkins:lts
+        ports:
+          - name: http-port
+            containerPort: 8080
+          - name: jnlp-port
+            containerPort: 50000
+        volumeMounts:
+          - name: jenkins-vol
+            mountPath: /var/jenkins_vol
+      volumes:
+        - name: jenkins-vol
+          emptyDir: {}
+</code></pre><p>Here we define the app name jenkins, the container image (& version) that requires to be used. We also define the ports which will be used.</p><p>After the above step has been completed, run the below line to see the pods that has been spun up and running.</p><pre tabindex=0><code>kubectl get pods -n jenkins
+</code></pre><p>You will see information like below, please note the suffix after jenkins will be different for you.</p><p><img src=screen4.png alt=screenshot-4></p><p>Once we confirm the running status, lets expose the jenkins pod using a service, here I am using a LoadBalancer service to expose the app to the outside world. Once again we are taking advantage of the yaml config file to pass the requirements.</p><pre tabindex=0><code>kubectl create -f &#39;C:\Scripts\jenkins-service.yaml&#39; --namespace jenkins
+</code></pre><p>jenkins-service.yaml looks like this:</p><pre tabindex=0><code>apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30000
+  selector:
+    app: jenkins
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-jnlp
+spec:
+  type: ClusterIP
+  ports:
+    - port: 50000
+      targetPort: 50000
+  selector:
+    app: jenkins
+</code></pre><p>Perfect, by now we have done major part of the tasks that needs to be done. We can watch the status of external ip creation by running the below line:</p><pre tabindex=0><code>kubectl get services --namespace jenkins --watch
+</code></pre><p>The output should look similar to below. Please make note of the external ip from your terminal because thats what we will be using in the next parts.</p><p><img src=screen5.png alt=screenshot-5></p><p>Reuse the code we used above &lsquo;kubectl get pods -n jenkins&rsquo; to get the suffix of our pod. we will need to use this in to run the below line.</p><pre tabindex=0><code>kubectl logs jenkins-6fb994cfc5-twnvn -n jenkins
+</code></pre><p>This will give a log output on the terminal. From this, you will have to copy the password for the admin which was auto generated during the installation. You will see your password in place of &lsquo;your_jenkins_password&rsquo;</p><pre tabindex=0><code>Running from: /usr/share/jenkins/jenkins.war
+webroot: EnvVars.masterEnvVars.get(&#34;JENKINS_HOME&#34;)
+. . .
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+your_jenkins_password
+
+This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+...
+</code></pre><p>Thats it! Now we have Setup K8s and have a running Jenkins App. Sadly thats the end of all operations using CLI for this tutorial. Now we will head to the GUI of Jenkins and set it up.</p><h2 id=setting-up-jenkins--creating-first-pipeline>Setting up Jenkins & Creating First pipeline</h2><p>Let&rsquo;s head straight to the URL to access our Jenkins app in the AKS. We will use the external IP obtained before. In the below example, am assuming the external IP is 12.12.12.12</p><pre tabindex=0><code> http://12.12.12.12:8080/
+</code></pre><p>You will see a page asking for the admin password. Remember the password we obtained earlier from the log. Yes, we will be using it here and then click continue.</p><p><img src=screen6.png alt=screenshot-6></p><p>In this next page select the Install suggested plugins and proceed. This process will take some time to complete. Time for a short break!</p><p>Alright, once the installation is completed it would take us to a page were we will be asked to enter the username and new password. Lets skip all that for the time being. I am going to continue to use the admin as username and the password from logs for some more time. You can set these any time later from within the application if required.</p><p>From the Landing page click on the New Item</p><p><img src=screen7.png alt=screenshot-7></p><p>From the new items page, do the following:</p><p><img src=screen8.png alt=screenshot-8></p><ol><li>Enter the Name of the pipeline. e.g Hello World</li><li>Select the Method as Pipeline</li><li>Click Ok to continue</li></ol><p>In the next page scroll down to the bottom to see the pipeline scripting section. Paste the hello world script as below</p><pre tabindex=0><code>pipeline {
+    agent any 
+    stages {
+        stage(&#39;Stage 1&#39;) {
+            steps {
+                echo &#39;Hello world!&#39; 
+            }
+        }
+    }
+}
+</code></pre><p>It should look like this, click save and apply.</p><p><img src=screen9.png alt=screenshot-9></p><p>Now click on the pipeline name we just created (use the top breadcrumbs)</p><p><img src=screen10.png alt=screenshot-10></p><p>Click on the Build Now from the left menu.</p><p><img src=screen11.png alt=screenshot-11></p><p>you will notice a pipeline run in progress as shown below:</p><p><img src=screen12.png alt=screenshot-12></p><p>Thats it ! We have created & run a simple pipeline in Jenkins.</p><p><img src=screen13.png alt=screenshot-13></p><p>Click on the #1 to check the build output or simply click on the stage logs to see the output.</p><p><img src=screen14.png alt=screenshot-14></p><p>You will see the Hello World Output as Expected!</p><p><img src=screen15.png alt=screenshot-15></p><p>Thank you all for staying with me throughout the tut. Hope you all enjoyed it.</p><p><em>Keep Automating! Keep Learning! For Sky is the Limit!</em></p><h2 id=credits--sources>Credits & Sources</h2><p><a href=https://www.jenkins.io/doc/book/pipeline/getting-started/>Getting started with Pipeline (jenkins.io)</a></p><p><a href=https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough>Quickstart: Deploy an AKS cluster by using Azure CLI - Azure Kubernetes Service | Microsoft Docs</a></p><p><a href=https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-kubernetes>How To Install Jenkins on Kubernetes | DigitalOcean</a></p></div><div class="row pl-3 pr-3"><div class="col-md-6 share-buttons"><strong>Share on:</strong>
+<a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcaptv89.github.io%2fposts%2fjenkins-on-kubernetes%2f" target=_blank><i class="fab fa-facebook"></i></a>
+<a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fcaptv89.github.io%2fposts%2fjenkins-on-kubernetes%2f&text=Jenkins%20on%20Kubernetes&via=Tech%20Savvy%20Sailor" target=_blank><i class="fab fa-twitter"></i></a>
+<a class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fcaptv89.github.io%2fposts%2fjenkins-on-kubernetes%2f&title=Jenkins%20on%20Kubernetes" target=_blank><i class="fab fa-reddit"></i></a>
+<a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fcaptv89.github.io%2fposts%2fjenkins-on-kubernetes%2f&title=Jenkins%20on%20Kubernetes" target=_blank><i class="fab fa-linkedin"></i></a>
+<a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=Jenkins%20on%20Kubernetes https%3a%2f%2fcaptv89.github.io%2fposts%2fjenkins-on-kubernetes%2f" target=_blank><i class="fab fa-whatsapp"></i></a>
+<a class="btn btn-sm telegram-btn" href="https://telegram.me/share/url?url=https%3a%2f%2fcaptv89.github.io%2fposts%2fjenkins-on-kubernetes%2f&text=Jenkins%20on%20Kubernetes" target=_blank><i class="fab fa-telegram"></i></a>
+<a class="btn btn-sm email-btn" href="mailto:?subject=Jenkins%20on%20Kubernetes&body=https%3a%2f%2fcaptv89.github.io%2fposts%2fjenkins-on-kubernetes%2f" target=_blank><i class="fas fa-envelope-open-text"></i></a></div><div class="col-md-6 btn-improve-page"><a href=https://github.com/captv89/captv89.github.io/edit/master/content/posts/jenkins-on-kubernetes/index.md title="Improve this page" target=_blank rel=noopener><i class="fas fa-code-branch"></i>
+Improve this page</a></div></div><hr><div class="row next-prev-navigator"></div><hr></div></div></div><a id=scroll-to-top class=btn><i class="fas fa-chevron-circle-up"></i></a></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><a href=#installing-azure-cli>Installing Azure CLI</a></li><li><a href=#deploying-azure-kubernetes-service-aks-cluster>Deploying Azure Kubernetes Service (AKS) cluster</a></li><li><a href=#installing-kubectl---kubernetes-cli>Installing Kubectl - Kubernetes CLI</a></li><li><a href=#deploying-jenkins-on-aks>Deploying Jenkins on AKS</a></li><li><a href=#setting-up-jenkins--creating-first-pipeline>Setting up Jenkins & Creating First pipeline</a></li><li><a href=#credits--sources>Credits & Sources</a></li></ul></nav></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://captv89.github.io#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://captv89.github.io#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=https://captv89.github.io#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=https://captv89.github.io#education>Education</a></li><li class=nav-item><a class=smooth-scroll href=https://captv89.github.io#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=https://captv89.github.io#recent-posts>Recent Posts</a></li><li class=nav-item><a class=smooth-scroll href=https://captv89.github.io#accomplishments>Accomplishments</a></li><li class=nav-item><a class=smooth-scroll href=https://captv89.github.io/photography/>Photography</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:s274ciaky@mozmail.com target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span> <span>s274ciaky@mozmail.com</span></a></li><li><a href=https://github.com/captv89 target=_blank rel=noopener><span><i class="fab fa-github"></i></span> <span>captv89</span></a></li><li><a href=https://www.linkedin.com/in/vishnu-ravendranathan-1b3b9496 target=_blank rel=noopener><span><i class="fab fa-linkedin"></i></span> <span>Vishnu Ravendranathan</span></a></li><li><a href=https://t.me/i_am_vishnu target=_blank rel=noopener><span><i class="fab fa-telegram"></i></span> <span>i_am_vishnu</span></a></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hossainemruz/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2022 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<script type=text/javascript src=/js/popper.min.js></script>
+<script type=text/javascript src=/js/bootstrap.min.js></script>
+<script type=text/javascript src=/js/navbar.js></script>
+<script type=text/javascript src=/js/plyr.js></script>
+<script type=text/javascript src=/js/main.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script><script src=/js/mermaid-8.14.0.min.js></script>
+<script>mermaid.initialize({startOnLoad:!0})</script></body></html>
