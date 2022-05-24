@@ -10,9 +10,9 @@ languages:
   en:
     languageName: English
     weight: 1
-  # de:
-  #   languageName: Deutsch
-  #   weight: 3
+  de:
+    languageName: Deutsche
+    weight: 3
 
 # Force a locale to be use, really useful to develop the application ! Should be commented in production, the "weight" should rocks.
 
@@ -65,7 +65,7 @@ params:
       enable: true
     # Enable and configure blog posts
     blog:
-      enable: false
+      enable: true
       # Share post on different social media
       shareButtons:
         facebook: true

@@ -1,0 +1,123 @@
+# section information
+section:
+  name: Education
+  id: education
+  template: sections/education.html # Use "sections/education-alt.html for alternate template.
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+degrees:
+- name: B.Sc Nautical Science
+  icon: fa-anchor
+  timeframe: 2007-2010
+  institution:
+    name: AMET University
+    url: "https://www.ametuniv.ac.in/"
+  grade: #(optional)
+    scale: CGPA
+    achieved: 7.96
+    outOf: 10
+  takenCourses: #(optional)
+    # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+    showGrades: false
+    collapseAfter: 3
+    courses:
+    - name: Terrestrial and Celestial Navigation
+      achieved: 3.75
+      outOf: 4
+    - name: Marine Electrical Engineering
+      achieved: 3.80
+      outOf: 4
+    - name: Cargo Operations
+      achieved: 3.5
+      outOf: 4
+    - name: Ship Stability
+      achieved: 3.75
+      outOf: 4
+    - name: Naval Architecture
+      achieved: 3.75
+      outOf: 4
+    - name: Chartwork
+      achieved: 3.75
+      outOf: 4
+  # publications: #(optional)
+  # - title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  #   url: "#"
+  # - title: Fusce eu augue ut odio porttitor pulvinar.
+  #   url: "#"
+  # - title: Nullam vitae orci tincidunt purus viverra pulvinar.
+  #   url: "#"
+  extracurricularActivities: #(optional)
+  - Cadet captain during the first year
+  - Active football player.
+  - Represented academy in various cultural events.
+  - Participation in march-past(parade).
+  - Active professional video gaming.
+# - name: B.Sc. in Computer Science & Engineering
+#   icon: fa-graduation-cap
+#   timeframe: 2012-2016
+#   institution:
+#     name: University of XYZ
+#     url: "#"
+#   grade: #(optional)
+#     scale: CGPA
+#     achieved: 3.5
+#     outOf: 4
+#   takenCourses: #(optional)
+#     # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+#     showGrades: true
+#     collapseAfter: 3
+#     courses:
+#     - name: Data Structures and Algorithm
+#       achieved: 3.75
+#       outOf: 4
+#     - name: Network Security
+#       achieved: 3.80
+#       outOf: 4
+#     - name: Operating System
+#       achieved: 3.5
+#       outOf: 4
+#     - name: Artificial Intelligent
+#       achieved: 3.75
+#       outOf: 4
+  # publications: #(optional)
+  # - title: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  #   url: "#"
+  # - title: Fusce eu augue ut odio porttitor pulvinar.
+  #   url: "#"
+  # extracurricularActivities: #(optional)
+  # - In vitae facilisis est, eget porta sem.
+  # - Vestibulum consectetur lorem justo, at laoreet lorem feugiat et.
+  # - Duis sed massa feugiat, ornare justo et, aliquam est.
+  # - Pellentesque ut fringilla magna.
+- name: Higher Secondary School Certificate (12th)
+  icon: fa-university
+  timeframe: 2006-2007
+  institution:
+    name: Kendriya Vidyalaya
+    url: "https://kvsangathan.nic.in/en"
+  grade: #(optional)
+    scale: Total Score
+    achieved: 84
+    outOf: 100
+  extracurricularActivities: #(optional)
+  - Cultural team captain
+  - Quiz and Debate team participant
+  - School house captain
+  - Football player
+- name: Secondary School Certificate (10th)
+  icon: fa-school
+  timeframe: 2004-2005
+  institution:
+    name: Kendriya Vidyalaya
+    url: "https://kvsangathan.nic.in/en"
+  grade: #(optional)
+    scale: Total Score
+    achieved: 82
+    outOf: 100
+  extracurricularActivities: #(optional)
+    - Monoacting and Singing participant
+    - Quiz and Debate team participant
