@@ -85,3 +85,21 @@ projects:
   summary: Rapid API development using Gin.
   tags: ["learning", "fun", "API", "golang"]
 
+- name: Tic Tac Toe
+  logo: /images/sections/projects/tic-tac-toe.png
+  role: Developer/Owner
+  timeline: "Sep 2022"
+  repo: "https://github.com/captv89/tic_tac_toe"
+  url: "https://github.com/captv89/tic_tac_toe"
+  summary: Tic Tac Toe is an Android game build with Flutter.
+  tags: ["game", "android", "flutter", "dart"]
+
+- name: Work Time
+  logo: /images/sections/projects/timetable.png
+  role: Developer/Owner
+  timeline: "Sep 2022"
+  repo: "https://github.com/captv89/work_time_calculator"
+  url: "https://github.com/captv89/work_time_calculator"
+  summary: Punch-in and Puch-out tracker including break time, an android app build with Flutter.
+  tags: ["utility", "android", "flutter", "dart"]
+
