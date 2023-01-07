@@ -20,18 +20,20 @@ sections:
 - type: document
   path: data/de/site.yaml
   label: Site Details (DE)
+- type: heading
+  label: Sections
 - type: directory
   path: data/de/sections/*
   label: Section - German
   create: all
   match: "**/*"
-  new_doc_ext: yaml
+  new_doc_ext: ".yaml"
 - type: directory
   path: data/en/sections/*
   label: Sections - English
   create: all
   match: "**/*"
-  new_doc_ext: yaml
+  new_doc_ext: ".yaml"
 - type: heading
   label: Blog
 - type: directory
