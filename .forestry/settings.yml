@@ -9,27 +9,23 @@ sections:
 - type: document
   path: data/en/author.yaml
   label: Author (EN)
-  match: "**/*"
 - type: document
-  path: data/en/author.yaml
+  path: data/de/author.yaml
   label: Author (DE)
-  match: "**/*"
 - type: heading
   label: Site
 - type: document
   path: data/en/site.yaml
   label: Site Details (EN)
-  match: "**/*"
 - type: document
   path: data/de/site.yaml
   label: Site Details (DE)
-  match: "**/*"
 - type: directory
   path: data/de/sections/*
   label: Section - German
   create: all
   match: "**/*"
-  new_doc_ext: ".yaml"
+  new_doc_ext: yaml
 - type: directory
   path: data/en/sections/*
   label: Sections - English
