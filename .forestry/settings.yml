@@ -4,22 +4,47 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: heading
+  label: Author
+- type: document
+  path: data/en/author.yaml
+  label: Author (EN)
+  match: "**/*"
+- type: document
+  path: data/en/author.yaml
+  label: Author (DE)
+  match: "**/*"
+- type: heading
+  label: Site
+- type: document
+  path: data/en/site.yaml
+  label: Site Details (EN)
+  match: "**/*"
+- type: document
+  path: data/de/site.yaml
+  label: Site Details (DE)
+  match: "**/*"
+- type: directory
+  path: data/de/sections/*
+  label: Section - German
+  create: all
+  match: "**/*"
+  new_doc_ext: ".yaml"
 - type: directory
   path: data/en/sections/*
   label: Sections - English
   create: all
   match: "**/*"
-  new_doc_ext: ".yaml"
-- type: directory
-  path: content
-  label: Pages
-  create: all
-  match: "*"
+  new_doc_ext: yaml
+- type: heading
+  label: Blog
 - type: directory
   path: content/posts
   label: Posts
   create: all
   match: "**/*"
+- type: heading
+  label: Notes
 - type: directory
   path: content/notes
   label: Notes
