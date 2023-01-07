@@ -26,7 +26,7 @@ projects:
   role: Contributor
   timeline: "March 2018 - May 2019"
   repo: https://github.com/InstaPy/InstaPy # If your project is a public repo on GitHub, then provide this link. it will show star count.
-  url: "https://pypi.org/project/instapy/"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  # url: "https://pypi.org/project/instapy/"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
   summary: Social Media Marketing tool to automate instagram profile management.
   tags: ["professional", "smm", "automation", "selenium", "python"]
 
@@ -37,13 +37,13 @@ projects:
   repo: https://github.com/captv89/bnb-booking
   #url: ""
   summary: An hands on approach to create a full stack booking web application using golang.
-  tags: ["professional", "hobby", "golang", "learning", "web-app"]
+  tags: ["professional", "hobby", "golang", "learning", "web-app", "full-stack"]
 
 - name: Documentation Portal
   logo: /images/sections/projects/docs.png
   role: Developer/Owner
   timeline: "Jul 2021"
-  repo: "https://github.com/captv89/HelpPortal"
+  #repo: "https://github.com/captv89/HelpPortal"
   url: "https://captv89.github.io/HelpPortal/"
   summary: Professional documentation site theme to host manuals and user guide videos. Powered by React & Docusaurus.
   tags: ["professional","react","documentation"]
@@ -52,7 +52,7 @@ projects:
   logo: /images/sections/projects/calculator.svg
   role: Developer/Owner
   timeline: "Jan 2022"
-  repo: "https://github.com/captv89/svelte-calc"
+  #repo: "https://github.com/captv89/svelte-calc"
   url: "https://svelte-calculator-alpha.vercel.app/"
   summary: A simple calculator client app built with svelte.
   tags: ["academic","svelte", "learning"]
@@ -62,7 +62,7 @@ projects:
   logo: /images/sections/projects/game.svg
   role: Developer/Owner
   timeline: "Oct 2021"
-  repo: "https://github.com/captv89/pig-game"
+  #repo: "https://github.com/captv89/pig-game"
   url: "https://captv89.github.io/pig-game/"
   summary: A web game built with vanilla JS from scratch.
   tags: ["hobby","fun","game","js"]
@@ -71,7 +71,7 @@ projects:
   logo: /images/sections/projects/comic.svg
   role: Developer/Owner
   timeline: "Jul 2021"
-  repo: "https://github.com/captv89/fast-comics"
+  #repo: "https://github.com/captv89/fast-comics"
   url: "https://captv89.github.io/fast-comics/"
   summary: Blazing fast comic site generator powered by Hugo. Static comic site with lightbox and improved UX.
   tags: ["hobby","hugo","comics"]
@@ -81,7 +81,7 @@ projects:
   role: Developer/Owner
   timeline: "Nov 2021"
   repo: "https://github.com/captv89/web-service-gin"
-  url: "https://whispering-hollows-56519.herokuapp.com/albums"
+  # url: "https://whispering-hollows-56519.herokuapp.com/albums"
   summary: Rapid API development using Gin.
   tags: ["learning", "fun", "API", "golang"]
 
@@ -90,7 +90,7 @@ projects:
   role: Developer/Owner
   timeline: "Sep 2022"
   repo: "https://github.com/captv89/tic_tac_toe"
-  url: "https://github.com/captv89/tic_tac_toe"
+  # url: "https://github.com/captv89/tic_tac_toe"
   summary: Tic Tac Toe is an Android game build with Flutter.
   tags: ["hobby", "game", "android", "flutter", "dart"]
 
@@ -99,7 +99,24 @@ projects:
   role: Developer/Owner
   timeline: "Sep 2022"
   repo: "https://github.com/captv89/work_time_calculator"
-  url: "https://github.com/captv89/work_time_calculator"
+  # url: "https://github.com/captv89/work_time_calculator"
   summary: Punch-in and Puch-out tracker including break time, an android app build with Flutter.
   tags: ["hobby", "utility", "android", "flutter", "dart"]
 
+- name: Svelte Geo Map
+  logo: /images/sections/projects/geomap.png
+  role: Developer/Owner
+  timeline: "Jan 2023"
+  # repo: "https://github.com/captv89/svelte-map"
+  url: "http://svelte-map-theta.vercel.app/"
+  summary: Getting familiar with svelte and leaflet.
+  tags: ["hobby", "frontend", "learning", "svelte", "leaflet", "geojson"]
+
+- name: Sea Route
+  logo: /images/sections/projects/searoute.png
+  role: Developer/Owner
+  timeline: "Jan 2023"
+  # repo: "https://github.com/captv89/seaRoute"
+  url: "https://searoute.captv.ovh/"
+  summary: Find the shortest sea route between any two co-ordinates on earth.
+  tags: ["professional", "full-stack", "learning", "golang", "leaflet", "geojson"]
