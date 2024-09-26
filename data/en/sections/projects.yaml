@@ -120,3 +120,12 @@ projects:
   url: "https://searoute.captv.ovh/"
   summary: Find the shortest sea route between any two co-ordinates on earth.
   tags: ["professional", "full-stack", "learning", "golang", "leaflet", "geojson"]
+
+- name: Recipe TUI
+  logo: /images/sections/projects/recipe.png
+  role: Developer/Owner
+  timeline: "Sep 2024"
+  repo: "https://github.com/captv89/recipe-tui"
+  # url: "https://searoute.captv.ovh/"
+  summary: A Terminal UI App for searching and viewing recipes.
+  tags: ["hobby", "elm-architecture", "learning", "golang", "bubbletea", "tui"]

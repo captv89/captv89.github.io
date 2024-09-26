@@ -23,100 +23,109 @@ buttons:
 projects:
 - name: InstaPy
   logo: /images/sections/projects/instapy.jpg
-  role: Contributor
-  timeline: "March 2018 - May 2019"
+  role: Mitwirkender
+  timeline: "März 2018 – Mai 2019"
   repo: https://github.com/InstaPy/InstaPy # If your project is a public repo on GitHub, then provide this link. it will show star count.
   # url: "https://pypi.org/project/instapy/"  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
-  summary: Social Media Marketing tool to automate instagram profile management.
+  summary: Social-Media-Marketing-Tool zur Automatisierung der Instagram-Profilverwaltung.
   tags: ["professional", "smm", "automation", "selenium", "python"]
 
 - name: BnB Booking
   logo: /images/sections/projects/coffee.png
-  role: Developer/Owner
-  timeline: "Apr 2022"
+  role: Entwickler/Eigentümer
+  timeline: "April 2022"
   repo: https://github.com/captv89/bnb-booking
   #url: ""
-  summary: An hands on approach to create a full stack booking web application using golang.
-  tags: ["professional", "hobby", "golang", "learning", "web-app", "full-stack"]
+  summary: Ein praktischer Ansatz zum Erstellen einer Full-Stack-Webanwendung für Buchungen mit Golang.
+  tags: ["professional", "Hobby", "golang", "Lernen", "web-app", "full-stack"]
 
-- name: Documentation Portal
+- name: Dokumentationsportal
   logo: /images/sections/projects/docs.png
-  role: Developer/Owner
-  timeline: "Jul 2021"
+  role: Entwickler/Eigentümer
+  timeline: "Juli 2021"
   #repo: "https://github.com/captv89/HelpPortal"
   url: "https://captv89.github.io/HelpPortal/"
-  summary: Professional documentation site theme to host manuals and user guide videos. Powered by React & Docusaurus.
-  tags: ["professional","react","documentation"]
+  summary: Professionelles Dokumentations-Site-Theme zum Hosten von Handbüchern und Benutzeranleitungsvideos. Unterstützt von React & Docusaurus.
+  tags: ["professional","react","Dokumentation"]
 
-- name: A sample calculator
+- name: Ein Beispielrechner
   logo: /images/sections/projects/calculator.svg
-  role: Developer/Owner
-  timeline: "Jan 2022"
+  role: Entwickler/Eigentümer
+  timeline: "Januar 2022"
   #repo: "https://github.com/captv89/svelte-calc"
   url: "https://svelte-calculator-alpha.vercel.app/"
-  summary: A simple calculator client app built with svelte.
+  summary: Eine einfache Taschenrechner-Client-App, die mit svelte erstellt wurde.
   tags: ["academic","svelte", "learning"]
 
 
 - name: Pig Game
   logo: /images/sections/projects/game.svg
-  role: Developer/Owner
-  timeline: "Oct 2021"
+  role: Entwickler/Eigentümer
+  timeline: "Okt. 2021"
   #repo: "https://github.com/captv89/pig-game"
   url: "https://captv89.github.io/pig-game/"
-  summary: A web game built with vanilla JS from scratch.
-  tags: ["hobby","fun","game","js"]
+  summary: Ein Webspiel, das von Grund auf mit Vanilla JS erstellt wurde.
+  tags: ["Hobby","Spaß","Spiel","js"]
 
-- name: Comic Site Generator
+- name: Comic-Site-Generator
   logo: /images/sections/projects/comic.svg
-  role: Developer/Owner
-  timeline: "Jul 2021"
+  role: Entwickler/Eigentümer
+  timeline: "Juli 2021"
   #repo: "https://github.com/captv89/fast-comics"
   url: "https://captv89.github.io/fast-comics/"
-  summary: Blazing fast comic site generator powered by Hugo. Static comic site with lightbox and improved UX.
-  tags: ["hobby","hugo","comics"]
+  summary: Blitzschneller Comic-Site-Generator von Hugo. Statische Comic-Site mit Lightbox und verbesserter UX.
+  tags: ["Hobby","hugo","comics"]
 
 - name: Gin API Backend
   logo: /images/sections/projects/gin.png
-  role: Developer/Owner
+  role: Entwickler/Eigentümer
   timeline: "Nov 2021"
   repo: "https://github.com/captv89/web-service-gin"
   # url: "https://whispering-hollows-56519.herokuapp.com/albums"
-  summary: Rapid API development using Gin.
-  tags: ["learning", "fun", "API", "golang"]
+  summary: Schnelle API-Entwicklung mit Gin.
+  tags: ["Lernen", "Spaß", "API", "golang"]
 
 - name: Tic Tac Toe
   logo: /images/sections/projects/tic-tac-toe.png
-  role: Developer/Owner
-  timeline: "Sep 2022"
+  role: Entwickler/Eigentümer
+  timeline: "September 2022"
   repo: "https://github.com/captv89/tic_tac_toe"
   # url: "https://github.com/captv89/tic_tac_toe"
-  summary: Tic Tac Toe is an Android game build with Flutter.
+  summary: Tic Tac Toe ist ein Android-Spiel, das mit Flutter erstellt wurde.
   tags: ["hobby", "game", "android", "flutter", "dart"]
 
 - name: Work Time
   logo: /images/sections/projects/timetable.png
-  role: Developer/Owner
-  timeline: "Sep 2022"
+  role: Entwickler/Eigentümer
+  timeline: "September 2022"
   repo: "https://github.com/captv89/work_time_calculator"
   # url: "https://github.com/captv89/work_time_calculator"
-  summary: Punch-in and Puch-out tracker including break time, an android app build with Flutter.
+  summary: Punch-in-und Punch-out-Tracker inklusive Pausenzeit, eine mit Flutter erstellte Android-App.
   tags: ["hobby", "utility", "android", "flutter", "dart"]
 
 - name: Svelte Geo Map
   logo: /images/sections/projects/geomap.png
-  role: Developer/Owner
+  role: Entwickler/Eigentümer
   timeline: "Jan 2023"
   # repo: "https://github.com/captv89/svelte-map"
   url: "http://svelte-map-theta.vercel.app/"
-  summary: Getting familiar with svelte and leaflet.
-  tags: ["hobby", "frontend", "learning", "svelte", "leaflet", "geojson"]
+  summary: Machen Sie sich mit Svelte und Leaflet vertraut.
+  tags: ["Hobby", "frontend", "learning", "svelte", "leaflet", "geojson"]
 
 - name: Sea Route
   logo: /images/sections/projects/searoute.png
-  role: Developer/Owner
-  timeline: "Jan 2023"
+  role: Entwickler/Eigentümer
+  timeline: "Juli 2023"
   # repo: "https://github.com/captv89/seaRoute"
   url: "https://searoute.captv.ovh/"
-  summary: Find the shortest sea route between any two co-ordinates on earth.
+  summary: Finden Sie den kürzesten Seeweg zwischen zwei beliebigen Koordinaten auf der Erde.
   tags: ["professional", "full-stack", "learning", "golang", "leaflet", "geojson"]
+
+- name: Recipe TUI
+  logo: /images/sections/projects/recipe.png
+  role: Entwickler/Eigentümer
+  timeline: "Sep 2024"
+  repo: "https://github.com/captv89/recipe-tui"
+  # url: "https://searoute.captv.ovh/"
+  summary: Eine Terminal-UI-App zum Suchen und Anzeigen von Rezepten.
+  tags: ["hobby", "elm-architecture", "learning", "golang", "bubbletea", "tui"]
