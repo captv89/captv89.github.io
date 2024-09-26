@@ -1,6 +1,6 @@
 # section information
 section:
-  name: Experiences
+  name: Erfahrungen
   id: experiences
   enable: true
   weight: 3
@@ -15,7 +15,7 @@ experiences:
     url: "https://www.dnv.com"
     location: Rostock, Germany
     # company overview
-    overview: DNV is an international accredited registrar and classification society headquartered in Høvik, Norway. The company currently has about 12,000 employees and 350 offices operating in more than 100 countries, and provides services for several industries including maritime, oil & gas, renewable energy, electrification, food & beverage and healthcare. 
+    overview: DNV ist eine international akkreditierte Registrierungs-und Klassifizierungsgesellschaft mit Hauptsitz in Høvik, Norwegen. Das Unternehmen beschäftigt derzeit etwa 12.000 Mitarbeiter und 350 Niederlassungen in mehr als 100 Ländern und bietet Dienstleistungen für verschiedene Branchen an, darunter Schifffahrt, Öl und Gas, erneuerbare Energien, Elektrifizierung, Lebensmittel und Getränke sowie Gesundheitswesen. 
   positions:
   - designation: Product Manager
     start: Dec 2021
@@ -23,57 +23,57 @@ experiences:
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Product Manager for (_Navigator_) **Maritime Software Products**
-    - Define vision and strategy for the life cycle of the product line.
-    - Lead and motivate the technical team to achieve goals.
-    - Customer interactions and target alignments.
-    - Architectural and technical brainstorming.
-    - Review & monitoring security implementations.
-    - Closely work with project, sales and marketing teams.
-    - Design to production of integrations with strategic partners
-    - Define functional documentation and designing ER for the data models.
-    - Consulting for multiple maritime ERP modules.
+    - Produktmanagerfor (_Navigator_) **Maritime Softwareprodukte**
+    - Definieren Sie eine Vision und Strategie für den Lebenszyklus der Produktlinie.
+    - Führen und motivieren Sie das technische Team, um Ziele zu erreichen.
+    - Kundeninteraktionen und Zielausrichtung.
+    - Architektonisches und technisches Brainstorming.
+    - Überprüfen und überwachen Sie Sicherheitsimplementierungen.
+    - Arbeiten Sie eng mit Projekt-, Vertriebs-und Marketingteams zusammen.
+    - Vom Entwurf bis zur Produktion von Integrationen mit strategischen Partnern
+    - Definieren Sie die funktionale Dokumentation und entwerfen Sie ER für die Datenmodelle.
+    - Beratung für mehrere maritime ERP-Module.
 
 
 - company:
     name: Alpha Ori Technologies
     url: "https://www.alphaori.sg/"
     location: Chennai, India
-    overview: Alpha Ori Technologies™ is transforming the multi-trillion dollar maritime industry from analog, disjointed systems into smart digital enterprises. The Digital Solutions harness the power of Data collected through Internet of Things, moving & making it usable via Cloud and applying Machine Learning & Artificial Intelligence to it.
+    overview: Alpha Ori Technologies™ verwandelt die mehrere Billionen Dollar schwere maritime Industrie von analogen, unzusammenhängenden Systemen in intelligente digitale Unternehmen. Die digitalen Lösungen nutzen die Leistungsfähigkeit der im Internet der Dinge gesammelten Daten, verschieben und nutzen sie über die Cloud und wenden maschinelles Lernen und künstliche Intelligenz darauf an.
   positions:
-  - designation: Business Analyst / Product Owner
+  - designation: Business-Analyst und Produktinhaber
     start: March 2020
     end: Nov 2021
     responsibilities:
-    - Product Owner for **Maintenance** module in the marine ERP
-    - Defining EAM & ERP Solution for Maritime Industry
-    - SME in Marine Business Application
-    - Dynamics 365 BC Functional Knowledge
-    - Requirements Gathering
-    - Project Coordinator
-    - DevOps Management
-    - Analyst for other maritime modules.
-    - Defining production deployment strategies with Architects.
-    - Data Analysis & Migration strategy development.
+    - Product Owner für **Technisch** Modul im Marine ERP
+    - Definition einer EAM-und ERP-Lösung für die maritime Industrie
+    - KMU in der Marine-Geschäftsanwendung
+    - Dynamics 365 BC Funktionswissen
+    - Anforderungserfassung
+    - Projektkoordinator
+    - DevOps-Management
+    - Analyst für andere maritime Module.
+    - Definieren von Produktionsbereitstellungsstrategien mit Architekten.
+    - Entwicklung von Datenanalyse-und Migrationsstrategien.
 
 - company:
-    name: Merchant Navy
+    name: Handelsmarine
     url: "https://en.wikipedia.org/wiki/Merchant_navy"
     location: Worldwide
-    overview: Merchant Navy is the stream of supply chain which moves cargo in bulk from point A to B. There are various types of ships to transport cargo of different nature.
+    overview: Die Handelsmarine ist der Strom der Lieferkette, der Fracht in großen Mengen von Punkt A nach B transportiert. Es gibt verschiedene Schiffstypen, um Fracht unterschiedlicher Art zu transportieren.
   positions:
-  - designation: Navigating Officer
+  - designation: Navigationsoffizier
     start: Oct 2010
     end: Nov 2019
     responsibilities:
-    - Professional training and certification in
-    - 1. Fire fighting
-    - 2. Emergency First Aid & Medical Care
-    - 3. Personal Survival Techniques
-    - 4. Watch keeping & Navigation
-    - 5. GMDSS Radio Communication
-    - Sailed on Bulk Carriers and Container Ships.
-    - Strong knowledge on vessel maintenance and management.
-    - Clear understanding of Ship Operations.
-    - Detailed knowledge of supply chain activities associated with merchant fleet.
-    - Good understanding of port operations.
+    - Berufsausbildung und Zertifizierung in
+    - 1. Brandbekämpfung
+    - 2. Erste Hilfe und medizinische Versorgung im Notfall
+    - 3. Persönliche Überlebenstechniken
+    - 4. Wachehalten und Navigation
+    - 5. GMDSS-Funkkommunikation
+    - Auf Massengutfrachtern und Containerschiffen gesegelt.
+    - Umfangreiche Kenntnisse in der Wartung und Verwaltung von Schiffen.
+    - Klares Verständnis des Schiffsbetriebs.
+    - Detaillierte Kenntnisse der Lieferkettenaktivitäten im Zusammenhang mit der Handelsflotte.
+    - Gute Kenntnisse des Hafenbetriebs.

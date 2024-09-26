@@ -13,58 +13,58 @@ section:
 skills:
 - name: Kubernetes
   logo: /images/sections/skills/kubernetes.png
-  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
+  summary: "Kann Anwendungen auf Kubernetes bereitstellen und verwalten. Erfahrung im Schreiben von Kubernetes-Controllern für CRDs."
   url: "https://kubernetes.io/"
 
 - name: Golang
   logo: /images/sections/skills/go.png
-  summary: "My go-to language for professional development. Capable of writing scalable, testable, and maintainable program."
+  summary: "Meine bevorzugte Sprache für die berufliche Weiterentwicklung. Kann skalierbare, testbare und wartbare Programme schreiben."
   url: "https://golang.org/"
 
 - name: Cloud Computing
   logo: /images/sections/skills/cloud.png
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+  summary: "Arbeitete mit den meisten großen Clouds wie GCP, AWS, Azure usw."
 
 - name: Navigation
   logo: /images/sections/skills/ship.svg
-  summary: "Capable to manoeuvering vessel in any sea condition. Experienced in docking and anchoring as well. Strong knowledge of maritime operations."
+  summary: "Kann das Schiff bei jedem Seegang manövrieren. Erfahrung im Anlegen und Ankern. Umfangreiche Kenntnisse im maritimen Bereich."
   url: "https://en.wikipedia.org/wiki/Navigation"
 
-- name: Product Management
+- name: Produktmanagement
   logo: /images/sections/skills/helm.svg
-  summary: "Capable of defining product vision, overseeing product's development from inception to completion and maintaining product during its lifecycle."
+  summary: "Fähig, die Produktvision zu definieren, die Produktentwicklung vom Anfang bis zur Fertigstellung zu überwachen und das Produkt während seines Lebenszyklus zu warten."
   url: "https://www.dnv.com/services/software-for-ship-operations-navigator-1441"
 
 - name: Linux
   logo: /images/sections/skills/linux.png
-  summary: "Using as the main operating system. Capable of writing bash/shell scripts."
+  summary: "Verwendung als Hauptbetriebssystem. Kann Bash/Shell-Skripte schreiben."
 
 - name: Git
   logo: /images/sections/skills/git.png
-  summary: "Experienced with git-based development. I have enjoyed working with Github, GitLab and Azure Repo."
+  summary: "Erfahrung mit Git-basierter Entwicklung. Die Arbeit mit Github, GitLab und Azure Repo hat mir Spaß gemacht."
   url: "https://git-scm.com/"
 
 - name: DevSecOps
   logo: /images/sections/skills/devops.svg
-  summary: "Hands on experience is DevSecOps activities. Setting CI/CD pipeline to deployment environments. Automating tasks related to security and QA. Experienced with Azure DevOps and Jenkins"
+  summary: "Praktische Erfahrung ist DevSecOps-Aktivitäten. Einrichten der CI/CD-Pipeline für Bereitstellungsumgebungen. Automatisierung von Aufgaben im Zusammenhang mit Sicherheit und Qualitätssicherung. Erfahrung mit Azure DevOps und Jenkins"
   url: "https://azure.microsoft.com/en-us/services/devops/"
 
-- name: Cyber Security
+- name: Cybersicherheit
   logo: /images/sections/skills/cybersec.svg
-  summary: "Security as a mindset. Keeping track of vulnerabilities, review SAST code reports and acting promptly to fix the issues in a timely manner. Shift Left security practices."
+  summary: "Sicherheit als Denkweise. Verfolgen Sie Schwachstellen, überprüfen Sie SAST-Codeberichte und handeln Sie umgehend, um die Probleme zeitnah zu beheben. Sicherheitspraktiken nach links verschieben."
   url: "https://snyk.io/learn/application-security/static-application-security-testing/"
 
-- name: Machine Learning (AI)
+- name: Maschinelles Lernen (KI)
   logo: /images/sections/skills/mlai.svg
-  summary: "Proficient in training ML models with TensorFlow. Rookie in MLOps. Hands on experience in developing models in Azure (NoCode) Machine Learning service."
+  summary: "Kenntnisse im Training von ML-Modellen mit TensorFlow. Rookie in MLOps. Praktische Erfahrung in der Entwicklung von Modellen im Azure (NoCode) Machine Learning-Dienst."
   url: "https://azure.microsoft.com/en-us/services/machine-learning/"
 
 - name: Flutter
   logo: /images/sections/skills/flutter.svg
-  summary: "Intermediate skill in developing cross-platform application using Flutter and Dart. Good understanding of stateless and stateful widgets. Having fun using animations."
+  summary: "Mittlere Kenntnisse in der Entwicklung plattformübergreifender Anwendungen mit Flutter und Dart. Gute Kenntnisse von zustandslosen und zustandsbehafteten Widgets. Viel Spaß beim Verwenden von Animationen."
   url: "https://flutter.dev/"
 
 - name: Svelte
   logo: /images/sections/skills/svelte.svg
-  summary: "Frontend framework of choice. Love animations and robust nature of the framework. Hands on experience in creating frontend apps with Golang backend server."
+  summary: "Frontend-Framework Ihrer Wahl. Ich liebe Animationen und die robuste Natur des Frameworks. Praktische Erfahrung in der Erstellung von Full-Stack-Apps mit Golang-Backend-Server."
   url: "https://www.linkedin.com/pulse/svelte-meets-gin-vishnu-raveendranathan/"

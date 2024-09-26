@@ -11,6 +11,31 @@ section:
 
 # Your accomplishments
 accomplishments:
+- name: Microsoft Certified - Azure AI Fundamentals
+  timeline: "June 2024"
+  organization:
+    name: Microsoft
+    url: https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification
+  courseOverview: Demonstrate fundamental AI concepts related to the development of software and services of Microsoft Azure to create AI solutions.
+  certificateURL: "https://learn.microsoft.com/api/credentials/share/en-us/VishnuRavendranathan-3200/1AD0F1E7602983E2?sharingId"
+
+- name: Product Led Growth - Micro Certification
+  timeline: "August 2023"
+  organization:
+    name: Product School
+    url: https://productschool.com
+  courseOverview: The Product Led Growth Micro Certification is a crash course, providing you with the tools and insights to navigate the landscape of growth-oriented product management.
+  certificateURL: "https://pdfhost.io/v/FjU7GUJvP_Product_Led_Growth_Micro_Certification"
+
+- name: Certified Product Manager (CPM)
+  timeline: "July 2022"
+  organization:
+    name: Product School
+    url: https://productschool.com/product-manager-certification
+  courseOverview: The Product Manager Certificate is awarded after completion of our 8-week course that prepares students to successfully build software products with a team of designers and engineers.
+  certificateURL: "https://certificate.productschool.com/9dabb66f-e89a-4b24-bb2f-591582d6e84f#gs.f7y6nh"
+
+
 - name: Security Training - Green Belt
   timeline: "May 2022"
   organization:
