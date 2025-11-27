@@ -11,6 +11,21 @@ section:
 # Your experiences
 experiences:
 - company:
+    name: Oldendorff Carriers
+    url: "https://www.oldendorff.com/"
+    location: Lübeck, Germany
+    overview: Oldendorff Carriers is a leading global dry bulk shipping company, operating a vast fleet and known for its commitment to operational excellence and technological advancement in maritime transport.
+  positions:
+  - designation: Product Management Teamlead - Fleet
+    start: Nov 2024
+    responsibilities:
+    - Leads the Fleet Product Management function, defining the overall product vision and strategy to support the comprehensive needs of the Fleet Management organization.
+    - Drives the digitalization journey of critical fleet management departments, focusing on leveraging technology to enhance operational efficiency and strategic decision-making.
+    - Manages complex product initiatives aimed at optimizing departmental processes, reducing duplication of effort, and unlocking performance gains across the fleet.
+    - Works cross-functionally with key stakeholders including Vessel IT, IT Operations, New Building, Finance, and various Fleet Management departments to ensure product-market fit and successful deployment.
+    - Acts as a central liaison and Subject Matter Expert (SME), translating in-depth knowledge of Fleet Operations (Crewing, Procurement, Technical Management, Performance Management, and QHSE) into actionable product roadmaps and requirements.
+    - Responsible for the end-to-end lifecycle management of the fleet-focused software portfolio, ensuring alignment with organizational strategic goals.
+- company:
     name: DNV
     url: "https://www.dnv.com"
     location: Rostock, Germany
@@ -19,11 +34,12 @@ experiences:
   positions:
   - designation: Product Manager
     start: Dec 2021
+    end: Oct 2024
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - Product Manager for (_Navigator_) **Maritime Software Products** 
+    - Product Manager for (_Navigator_) Maritime Software Products 
     - Define vision and strategy for the life cycle of the product line.
     - Lead and motivate the technical team to achieve goals.
     - Customer interactions and target alignments.
@@ -45,7 +61,7 @@ experiences:
     start: March 2020
     end: Nov 2021
     responsibilities:
-    - Product Owner for **Maintenance** module in the marine ERP
+    - Product Owner for Maintenance module in the marine ERP
     - Defining EAM & ERP Solution for Maritime Industry
     - SME in Marine Business Application
     - Dynamics 365 BC Functional Knowledge
