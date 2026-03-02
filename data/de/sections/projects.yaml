@@ -129,3 +129,12 @@ projects:
   # url: "https://searoute.captv.ovh/"
   summary: Eine Terminal-UI-App zum Suchen und Anzeigen von Rezepten.
   tags: ["hobby", "elm-architecture", "learning", "golang", "bubbletea", "tui"]
+
+- name: OpenDA
+  logo: /images/sections/projects/openda.png
+  role: Entwickler/Eigentümer
+  timeline: "Sep 2024"
+  repo: "https://github.com/captv89/openda"
+  # url: "https://searoute.captv.ovh/"
+  summary: OpenDA ist ein Open-Source-Tool, das mithilfe einer KI-Extraktionspipeline die PDA und die FDA vergleicht und die Unterschiede zur Überprüfung durch Menschen aufzeigt.
+  tags: ["hobby", "human-in-the-loop", "maritime", "ai", "llm", "docling"]
