@@ -7,7 +7,7 @@ menu:
     name: Autonomous Navigation
     identifier: autonomous-navigation
     weight: 40
-hero: autonomous_ship.jpg
+hero: autonomous_ship.png
 mermaid: true
 tags: ["Maritime", "Autonomous", "Python", "A*", "COLREGs", "Reinforcement Learning", "Nomoto Model"]
 categories: ["Tutorial"]
