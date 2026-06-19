@@ -1,6 +1,6 @@
 baseURL: https://captv89.github.io
 
-languageCode: en-us
+locale: en-us
 title: 'Tech Savvy Sailor'
 
 # Use Hugo modules to add theme
@@ -20,13 +20,13 @@ module:
 # Manage languages
 languages:
     en:
-        languageCode: en
-        languageName: English
+        locale: en
+        label: English
         title: Tech Savvy Sailor
         weight: 1
     de:
-        languageCode: de
-        languageName: Deutsche
+        locale: de
+        label: Deutsche
         title: Technikaffiner Segler
         weight: 3
 # default language for the content

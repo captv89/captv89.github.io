@@ -275,7 +275,7 @@ model.save("models/ppo_vessel")
 
 Around 4M steps, the policy starts to look competent. It navigates clean open water confidently. It avoids obvious traffic. It reaches the goal more often than not.
 
-But it runs aground. Not always, not even usually, but about 12.8% of the time in the benchmark suite, it finds a landmass and parks itself into it. Specifically: landmass geometries it hadn't seen much during training. The coastal scenario. Narrow channels. Random islands with unusual shapes.
+But it runs aground. Not always, not even usually, but about 13.3% of the time in the benchmark suite, it finds a landmass and parks itself into it. Specifically: landmass geometries it hadn't seen much during training. The coastal scenario. Narrow channels. Random islands with unusual shapes.
 
 This is the **generalisation gap**. The policy learned to navigate the environments it trained in. Maritime geography is diverse, and a neural network trained on one shape of coastline doesn't automatically generalise to a different one.
 
@@ -285,12 +285,12 @@ I expected doubling the training budget to close this gap. It didn't. Not meanin
 
 | | 4M steps | 10M steps |
 |---|---|---|
-| Score | 82.4 | 83.4 |
-| Success | 87.2% | 87.8% |
-| Grounding | 12.8% | 11.7% |
-| COLREGs compliance | 0.62 | 0.63 |
+| Score | 74.6 | 75.5 |
+| Success | 76.2% | 76.7% |
+| Grounding | 13.3% | 12.2% |
+| COLREGs compliance | 0.63 | 0.64 |
 
-+1.0 score point. −1.1pp grounding. +0.01 compliance. The policy improved, but barely. It had reached the ceiling of what it could extract from the current training setup.
++0.9 score point. −1.1pp grounding. +0.01 compliance. The policy improved, but barely. It had reached the ceiling of what it could extract from the current training setup.
 
 This was the clearest signal that the problem isn't training budget, it's the diversity of training scenarios. The policy needs to see more coast shapes, more confined geometries, during training. That's a curriculum learning problem, not a compute problem.
 
@@ -300,9 +300,9 @@ This was the clearest signal that the problem isn't training budget, it's the di
 
 This is the most interesting part. Watch both agents navigate the same scenario and you immediately see the personality difference.
 
-**Classical moves like a cautious senior officer.** It plans its route, follows it carefully, responds to traffic with early and deliberate alterations, and resumes the route cleanly after the threat passes. Every decision has a reason you can read in the decision log. It takes 63 seconds on average to complete a scenario.
+**Classical moves like a cautious senior officer.** It plans its route, follows it carefully, responds to traffic with early and deliberate alterations, and resumes the route cleanly after the threat passes. Every decision has a reason you can read in the decision log. It takes 224.9 seconds on average to complete a scenario.
 
-**RL moves like a very confident junior officer who cuts corners.** It finds shorter paths, path efficiency of 1.00, meaning it routinely beats the planned route length. It completes scenarios in 38.7 seconds on average, 39% faster. But its COLREGs compliance is 0.63 versus classical's 0.95. It sometimes turns the wrong way in head-on situations (compliance 0.41 on Rule 14, the head-on rule).
+**RL moves like a very confident junior officer who cuts corners.** It finds shorter paths, path efficiency of 1.00, meaning it routinely beats the planned route length. It completes scenarios in 197.4 seconds on average, 12% faster. But its COLREGs compliance is 0.64 versus classical's 0.94. It sometimes turns the wrong way in head-on situations (compliance 0.33 on Rule 14, the head-on rule).
 
 {{< video src="/posts/hands-on-autonomous-navigation-rl/classical_vs_rl_head_on.mp4" alt="Classical vs RL: Head-on Scenario" >}}
 
@@ -363,13 +363,13 @@ graph TD
 
 {{< /mermaid >}}
 
-Result: groundings go from 11.7% to **zero**. Completely eliminated. The RL policy still drives, it's still fast, still finds short paths, but it can't commit a fatal mistake because the classical layer catches it.
+Result: groundings go from 12.2% to **zero**. Completely eliminated. The RL policy still drives, it's still fast, still finds short paths, but it can't commit a fatal mistake because the classical layer catches it.
 
 {{< video src="/posts/hands-on-autonomous-navigation-rl/rl_vs_shielded_coastal.mp4" alt="RL vs Shielded: Coastal Scenario" >}}
 
 <br>
 
-This is called **shielding**, and it's an active area of safety research. What I found is that it costs about 27 additional seconds per scenario (65.8s vs 38.7s for unshielded RL), the price you pay for the classical layer's more conservative substitutions. But it's zero-grounding with decent COLREGs compliance (0.85 vs 0.63 unshielded).
+This is called **shielding**, and it's an active area of safety research. What I found is that it costs about 11 additional seconds per scenario (208.8s vs 197.4s for unshielded RL), the price you pay for the classical layer's more conservative substitutions. But it's zero-grounding with decent COLREGs compliance (0.67 vs 0.64 unshielded).
 
 It's the most practical finding in this whole project. Pure RL isn't ready to be alone on the bridge. Classical alone is slow and rigid. The combination gets you most of the benefits of both.
 
@@ -410,13 +410,13 @@ Despite the problems, some things are genuinely impressive:
 
 **It finds shorter paths.** The classical agent follows the A* planned route. RL ignores the route and navigates directly. In practice it beats planned route length consistently (path efficiency 1.00), at the cost of safety.
 
-**It degrades gracefully under disturbances.** In disturbed conditions (current and wind gusts), the RL policy barely changes its behaviour (score 83.4 calm to 83.2 disturbed). The classical pipeline scores drop more sharply (97.9 to 94.7) because the ILOS integral correction lags under rapid disturbance changes.
+**It degrades gracefully under disturbances.** In disturbed conditions (current and wind gusts), the RL policy's score actually improves (score 75.5 calm to 80.9 disturbed), likely because the disturbances affect its competitors more than itself. The classical pipeline scores drop more sharply (96.5 to 86.0) because the ILOS integral correction lags under rapid disturbance changes.
 
 {{< img src="/posts/hands-on-autonomous-navigation-rl/calm_vs_disturbed.png" align="center" title="Calm vs Disturbed Performance: Classical vs RL">}}
 
 <br>
 
-**It learned COLREGs-ish behaviour without being told.** Nobody programmed "turn to starboard in a head-on situation" into the RL agent. The reward signal includes a weak COLREGs preference term, but the bulk of compliance came from experience. It learned that starboard turns in crossing situations tend to lead to better outcomes. Not perfect, compliance is 0.63 overall, but genuinely emergent.
+**It learned COLREGs-ish behaviour without being told.** Nobody programmed "turn to starboard in a head-on situation" into the RL agent. The reward signal includes a weak COLREGs preference term, but the bulk of compliance came from experience. It learned that starboard turns in crossing situations tend to lead to better outcomes. Not perfect, compliance is 0.64 overall, but genuinely emergent.
 
 ---
 
